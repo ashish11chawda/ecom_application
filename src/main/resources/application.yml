@@ -1,0 +1,48 @@
+#spring.application.name=ecom-application
+#
+#spring.h2.console.enabled=true
+#spring.datasource.url=jdbc:h2:mem:test
+#spring.jpa.show-sql=true
+#spring.jpa.hibernate.ddl-auto=create
+#
+#management.endpoints.web.exposure.include=*
+#management.endpoint.health.show-details=always
+#
+#info.app.
+
+spring:
+  application:
+    name: ecom-application
+
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:mem:test
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+      show-components: never
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: 'Ecom Application'
+    description: 'Spring Boot Application for E-commerce'
+    version: '1.0.0'
