@@ -32,17 +32,17 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public Optional<UserResponse> fetchUser(Long id) {
+    public Optional<UserResponse> fetchUser(String id) {
         return userRepository.findById(id).map(this::mapToUserResponse);
     }
 
-    public Optional<UserResponse> removeUser(Long id) {
+    public Optional<UserResponse> removeUser(String id) {
         Optional<User> user = userRepository.findById(id);
         user.ifPresent(userRepository::delete);
         return user.map(this::mapToUserResponse);
     }
 
-    public Optional<UserResponse> updateUser(Long id, UserRequest updateUserRequest) {
+    public Optional<UserResponse> updateUser(String id, UserRequest updateUserRequest) {
         return userRepository.findById(id).map(existingUser -> {
             mapUserFromRequest(updateUserRequest, existingUser);
             userRepository.save(existingUser);

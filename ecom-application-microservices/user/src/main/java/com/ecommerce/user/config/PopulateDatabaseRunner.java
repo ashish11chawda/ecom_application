@@ -14,7 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PopulateDatabaseRunner implements CommandLineRunner {
 
-    private final UserService userService;
+//    private final UserService userService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -23,7 +23,7 @@ public class PopulateDatabaseRunner implements CommandLineRunner {
 //        populateCarts();
     }
 
-    private void populateUsers() {
+/*    private void populateUsers() {
         List<UserRequest> userRequestList = List.of(new UserRequest("Emily", "Johnson", "emily.johnson@x.dummyjson.com", "+81 965-431-3024", new AddressDTO("626 Main Street", "Phoenix", "Mississippi", "29112", "United States" ) ),
                 new UserRequest("Michael", "Williams", "michael.williams@x.dummyjson.com", "+49 258-627-6644", new AddressDTO("385 Fifth Street", "Houston", "Alabama", "38807", "United States" ) ),
                 new UserRequest("Sophia", "Brown", "sophia.brown@x.dummyjson.com", "+81 210-652-2785", new AddressDTO("1642 Ninth Street", "Washington", "Alabama", "32822", "United States" ) ),
@@ -56,5 +56,5 @@ public class PopulateDatabaseRunner implements CommandLineRunner {
 //                new UserRequest("Addison", "Wright", "addison.wright@x.dummyjson.com", "+1 514-384-3300", new AddressDTO("568 Tenth Street", "San Francisco", "Montana", "54698", "United States" ) )
                 );
         userRequestList.forEach(userService::addUser);
-    }
+    }*/
 }

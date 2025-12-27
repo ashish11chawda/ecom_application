@@ -23,7 +23,7 @@ public class PopulateDatabaseRunner implements CommandLineRunner {
 //        populateCarts();
     }
 
-    private void populateProducts() {
+/*    private void populateProducts() {
         List<ProductRequest> productRequestList = List.of(new ProductRequest("iPhone 5s", "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.", BigDecimal.valueOf(199.99), 25L, "smartphones", "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp" ),
                 new ProductRequest("iPhone 6", "The iPhone 6 is a stylish and capable smartphone with a larger display and improved performance. It introduced new features and design elements, making it a popular choice in its time.", BigDecimal.valueOf(299.99), 60L, "smartphones", "https://cdn.dummyjson.com/product-images/smartphones/iphone-6/thumbnail.webp" ),
                 new ProductRequest("iPhone 13 Pro", "The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.", BigDecimal.valueOf(1099.99), 56L, "smartphones", "https://cdn.dummyjson.com/product-images/smartphones/iphone-13-pro/thumbnail.webp" ),
@@ -41,7 +41,7 @@ public class PopulateDatabaseRunner implements CommandLineRunner {
                 new ProductRequest("Vivo V9", "The Vivo V9 is a smartphone known for its sleek design and emphasis on capturing high-quality selfies. It features a notch display, dual-camera setup, and a modern design.", BigDecimal.valueOf(299.99), 82L, "smartphones", "https://cdn.dummyjson.com/product-images/smartphones/vivo-v9/thumbnail.webp" ),
                 new ProductRequest("Vivo X21", "The Vivo X21 is a premium smartphone with a focus on cutting-edge technology. It features an in-display fingerprint sensor, a high-resolution display, and advanced camera capabilities.", BigDecimal.valueOf(499.99), 7L, "smartphones", "https://cdn.dummyjson.com/product-images/smartphones/vivo-x21/thumbnail.webp" ));
         productRequestList.forEach(productService::createProduct);
-    }
+    }*/
 /*
     private void populateUsers() {
         List<UserRequest> userRequestList = List.of(new UserRequest("Emily", "Johnson", "emily.johnson@x.dummyjson.com", "+81 965-431-3024", new AddressDTO("626 Main Street", "Phoenix", "Mississippi", "29112", "United States" ) ),

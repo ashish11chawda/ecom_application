@@ -15,7 +15,7 @@ public class PopulateDatabaseRunner implements CommandLineRunner {
 
 //    private final UserService userService;
 //    private final ProductService productService;
-    private final CartService cartService;
+//    private final CartService cartService;
 
     @Override
     public void run(String... args) throws Exception {
@@ -24,7 +24,7 @@ public class PopulateDatabaseRunner implements CommandLineRunner {
 //        populateCarts();
     }
 
-    private void populateCarts() {
+/*    private void populateCarts() {
         List<CartItemRequest> cartItemRequestList = List.of(
                 new CartItemRequest(1L, 1 + (int)(Math.random() * ((10 - 1) + 1))),
                 new CartItemRequest(2L, 1 + (int)(Math.random() * ((10 - 1) + 1))),
@@ -39,7 +39,7 @@ public class PopulateDatabaseRunner implements CommandLineRunner {
                 new CartItemRequest(11L, 1 + (int)(Math.random() * ((10 - 1) + 1)))
         );
         cartItemRequestList.forEach(request -> cartService.addToCart(String.valueOf(1 + (int)(Math.random() * ((5 - 1) + 1))), request));
-    }
+    }*/
 /*
     private void populateProducts() {
         List<ProductRequest> productRequestList = List.of(new ProductRequest("iPhone 5s", "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.", BigDecimal.valueOf(199.99), 25L, "smartphones", "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp" ),

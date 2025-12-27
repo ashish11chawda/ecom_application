@@ -22,7 +22,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserResponse> getUser(@PathVariable Long id) {
+    public ResponseEntity<UserResponse> getUser(@PathVariable String id) {
 
         return userService.fetchUser(id)
                 .map(ResponseEntity::ok)
@@ -36,14 +36,14 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UserResponse> updateUser(@PathVariable Long id, @RequestBody UserRequest updateUserRequest) {
+    public ResponseEntity<UserResponse> updateUser(@PathVariable String id, @RequestBody UserRequest updateUserRequest) {
         return userService.updateUser(id, updateUserRequest)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
+    public ResponseEntity<String> deleteUser(@PathVariable String id) {
         return userService.removeUser(id)
                 .map(user -> ResponseEntity.ok("User removed successfully"))
                 .orElseGet(() -> ResponseEntity.notFound().build());

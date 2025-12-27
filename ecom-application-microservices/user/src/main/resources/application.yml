@@ -1,6 +1,11 @@
 spring:
   application:
     name : user-service
+  data:
+    mongodb:
+#      uri: mongodb://localhost:27017/userdb
+      uri: mongodb+srv://ashish10chawda_db_user:GHp8fw5dPRLpd3vc@user-data.qu2klba.mongodb.net/?appName=user-data
+      database: userdb
   # Uncomment the following lines to enable H2 console and JPA settings
   # h2:
   #   console:
@@ -11,16 +16,16 @@ spring:
   #   show-sql: true
   #   hibernate:
   #     ddl-auto: create
-  datasource:
-    url: jdbc:postgresql://localhost:5432/userdb
-    username: ashish
-    password: ashish
-  jpa:
-    database: POSTGRESQL
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/userdb
+#    username: ashish
+#    password: ashish
+#  jpa:
+#    database: POSTGRESQL
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 server:
     port: 8080

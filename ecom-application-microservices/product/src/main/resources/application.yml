@@ -11,17 +11,33 @@ spring:
   #   show-sql: true
   #   hibernate:
   #     ddl-auto: create
+# POSTGRESQL Configuration
+#  datasource:
+##    url: jdbc:postgresql://localhost:5432/productdb
+#    url: jdbc:postgresql://ep-rapid-hill-a1c0vm3f-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channelBinding=require
+#    username: neondb_owner
+#    password: npg_IfoUZeglsn57
+#  jpa:
+#    database: POSTGRESQL
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+#MYSQL Configuration
   datasource:
-    url: jdbc:postgresql://localhost:5432/productdb
+    url: jdbc:mysql://localhost:3306/productdb
     username: ashish
     password: ashish
   jpa:
-    database: POSTGRESQL
     show-sql: true
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-
+    database-platform: org.hibernate.dialect.MySQLDialect
+    properties:
+      hibernate:
+        format_sql: true
 server:
     port: 8081
 
